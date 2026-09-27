@@ -1,0 +1,46 @@
+Aug 25 10:12:51.526 HYPERVISOR: Release 0.2.23-amd64/Linux (tag 2023010200)
+Aug 25 10:12:51.527 HYPERVISOR: Started on IP = 127.0.0.1, TCP port = 45121.
+Aug 25 10:12:51.535 HYPERVISOR: exec_cmd: hypervisor version 
+Aug 25 10:12:51.536 HYPERVISOR: exec_cmd: hypervisor working_dir /home/pandhack/проекты/CbS1_Networking_basics_Part_1.ID_1521088-1/src/arp_proekt/project-files/dynamips 
+Aug 25 10:12:51.536 GENERAL: working_dir=/home/pandhack/проекты/CbS1_Networking_basics_Part_1.ID_1521088-1/src/arp_proekt/project-files/dynamips
+Aug 25 10:12:51.536 HYPERVISOR: exec_cmd: hypervisor working_dir /home/pandhack/проекты/CbS1_Networking_basics_Part_1.ID_1521088-1/src/arp_proekt/project-files/dynamips/080c6e8f-1292-4c3f-9451-ece58fe555c9 
+Aug 25 10:12:51.536 GENERAL: working_dir=/home/pandhack/проекты/CbS1_Networking_basics_Part_1.ID_1521088-1/src/arp_proekt/project-files/dynamips/080c6e8f-1292-4c3f-9451-ece58fe555c9
+Aug 25 10:12:51.537 HYPERVISOR: exec_cmd: vm create R2 2 c3745 
+Aug 25 10:12:51.537 VM: VM R2 created.
+Aug 25 10:12:51.537 HYPERVISOR: exec_cmd: vm set_con_tcp_port R2 5001 
+Aug 25 10:12:51.538 HYPERVISOR: exec_cmd: c3745 get_mac_addr R2 
+Aug 25 10:12:51.538 HYPERVISOR: exec_cmd: vm set_ios R2 /home/pandhack/GNS3/images/IOS/c3745-adventerprisek9-mz.124-25.image 
+Aug 25 10:12:51.539 HYPERVISOR: exec_cmd: vm set_ram R2 256 
+Aug 25 10:12:51.539 HYPERVISOR: exec_cmd: vm set_nvram R2 256 
+Aug 25 10:12:51.540 HYPERVISOR: exec_cmd: vm set_disk0 R2 0 
+Aug 25 10:12:51.593 HYPERVISOR: exec_cmd: vm set_ios R2 /home/pandhack/GNS3/images/IOS/c3745-adventerprisek9-mz.124-25.image 
+Aug 25 10:12:54.324 HYPERVISOR: exec_cmd: vm set_ios R2 /home/pandhack/GNS3/images/IOS/c3745-adventerprisek9-mz.124-25.image 
+Aug 25 10:13:11.281 HYPERVISOR: exec_cmd: nio create_udp udp-2e6a3ea1-ef60-48bd-8349-e05b79c74cca 10004 127.0.0.1 10005 
+Aug 25 10:13:11.495 HYPERVISOR: exec_cmd: vm slot_add_nio_binding R2 0 0 udp-2e6a3ea1-ef60-48bd-8349-e05b79c74cca 
+Aug 25 10:13:11.496 HYPERVISOR: exec_cmd: vm get_status R2 
+Aug 25 10:13:37.234 HYPERVISOR: exec_cmd: vm set_ios R2 /home/pandhack/GNS3/images/IOS/c3745-adventerprisek9-mz.124-25.image 
+Aug 25 10:13:37.235 HYPERVISOR: exec_cmd: vm rename R2 rout2 
+Aug 25 10:13:37.286 HYPERVISOR: exec_cmd: vm set_ios rout2 /home/pandhack/GNS3/images/IOS/c3745-adventerprisek9-mz.124-25.image 
+Aug 25 10:13:40.408 HYPERVISOR: exec_cmd: vm set_ios rout2 /home/pandhack/GNS3/images/IOS/c3745-adventerprisek9-mz.124-25.image 
+Aug 25 10:15:08.043 HYPERVISOR: exec_cmd: vm create Ghost 0 c3745 
+Aug 25 10:15:08.044 VM: VM Ghost created.
+Aug 25 10:15:08.044 HYPERVISOR: exec_cmd: vm set_ios Ghost /home/pandhack/GNS3/images/IOS/c3745-adventerprisek9-mz.124-25.image 
+Aug 25 10:15:08.045 HYPERVISOR: exec_cmd: vm set_ghost_status Ghost 1 
+Aug 25 10:15:08.045 HYPERVISOR: exec_cmd: vm set_ghost_file Ghost /home/pandhack/проекты/CbS1_Networking_basics_Part_1.ID_1521088-1/src/arp_proekt/project-files/dynamips/c3745-adventerprisek9-mz.124-25.image-256.ghost 
+Aug 25 10:15:08.046 HYPERVISOR: exec_cmd: vm set_ram Ghost 256 
+Aug 25 10:15:08.046 HYPERVISOR: exec_cmd: vm get_status Ghost 
+Aug 25 10:15:08.046 HYPERVISOR: exec_cmd: vm set_config Ghost configs/i0_startup-config.cfg 
+Aug 25 10:15:08.047 HYPERVISOR: exec_cmd: vm start Ghost 
+Aug 25 10:15:08.132 HYPERVISOR: exec_cmd: vm get_status Ghost 
+Aug 25 10:15:08.132 HYPERVISOR: exec_cmd: vm stop Ghost 
+Aug 25 10:15:08.294 VM: VM Ghost shutdown.
+Aug 25 10:15:08.296 HYPERVISOR: exec_cmd: vm extract_config Ghost 
+Aug 25 10:15:08.297 HYPERVISOR: exec_cmd: vm clean_delete Ghost 
+Aug 25 10:15:08.297 VM: VM Ghost destroyed.
+Aug 25 10:15:08.299 HYPERVISOR: exec_cmd: vm set_ghost_status rout2 2 
+Aug 25 10:15:08.300 HYPERVISOR: exec_cmd: vm set_ghost_file rout2 /home/pandhack/проекты/CbS1_Networking_basics_Part_1.ID_1521088-1/src/arp_proekt/project-files/dynamips/c3745-adventerprisek9-mz.124-25.image-256.ghost 
+Aug 25 10:15:08.300 HYPERVISOR: exec_cmd: vm get_status rout2 
+Aug 25 10:15:08.301 HYPERVISOR: exec_cmd: vm set_config rout2 configs/i2_startup-config.cfg 
+Aug 25 10:15:08.302 HYPERVISOR: exec_cmd: vm start rout2 
+Aug 25 10:21:02.917 HYPERVISOR: exec_cmd: vm extract_config rout2 
+Aug 25 10:21:02.923 HYPERVISOR: exec_cmd: vm extract_config rout2 

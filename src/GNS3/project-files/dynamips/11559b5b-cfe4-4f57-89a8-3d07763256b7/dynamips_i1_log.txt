@@ -1,0 +1,32 @@
+Aug 25 10:12:21.017 HYPERVISOR: Release 0.2.23-amd64/Linux (tag 2023010200)
+Aug 25 10:12:21.017 HYPERVISOR: Started on IP = 127.0.0.1, TCP port = 56113.
+Aug 25 10:12:21.022 HYPERVISOR: exec_cmd: hypervisor version 
+Aug 25 10:12:21.022 HYPERVISOR: exec_cmd: hypervisor working_dir /home/pandhack/проекты/CbS1_Networking_basics_Part_1.ID_1521088-1/src/arp_proekt/project-files/dynamips 
+Aug 25 10:12:21.022 GENERAL: working_dir=/home/pandhack/проекты/CbS1_Networking_basics_Part_1.ID_1521088-1/src/arp_proekt/project-files/dynamips
+Aug 25 10:12:21.023 HYPERVISOR: exec_cmd: hypervisor working_dir /home/pandhack/проекты/CbS1_Networking_basics_Part_1.ID_1521088-1/src/arp_proekt/project-files/dynamips/dc787a56-f186-414d-993b-fe8439775423 
+Aug 25 10:12:21.023 GENERAL: working_dir=/home/pandhack/проекты/CbS1_Networking_basics_Part_1.ID_1521088-1/src/arp_proekt/project-files/dynamips/dc787a56-f186-414d-993b-fe8439775423
+Aug 25 10:12:21.023 HYPERVISOR: exec_cmd: vm create R1 1 c3745 
+Aug 25 10:12:21.023 VM: VM R1 created.
+Aug 25 10:12:21.023 HYPERVISOR: exec_cmd: vm set_con_tcp_port R1 5000 
+Aug 25 10:12:21.023 HYPERVISOR: exec_cmd: c3745 get_mac_addr R1 
+Aug 25 10:12:21.023 HYPERVISOR: exec_cmd: vm set_ios R1 /home/pandhack/GNS3/images/IOS/c3745-adventerprisek9-mz.124-25.image 
+Aug 25 10:12:21.023 HYPERVISOR: exec_cmd: vm set_ram R1 256 
+Aug 25 10:12:21.024 HYPERVISOR: exec_cmd: vm set_nvram R1 256 
+Aug 25 10:12:21.024 HYPERVISOR: exec_cmd: vm set_disk0 R1 0 
+Aug 25 10:12:21.058 HYPERVISOR: exec_cmd: vm set_ios R1 /home/pandhack/GNS3/images/IOS/c3745-adventerprisek9-mz.124-25.image 
+Aug 25 10:13:11.054 HYPERVISOR: exec_cmd: nio create_udp udp-79699a99-fffc-4489-be2b-71ae92637dff 10002 127.0.0.1 10003 
+Aug 25 10:13:11.265 HYPERVISOR: exec_cmd: vm slot_add_nio_binding R1 0 0 udp-79699a99-fffc-4489-be2b-71ae92637dff 
+Aug 25 10:13:11.266 HYPERVISOR: exec_cmd: vm get_status R1 
+Aug 25 10:13:27.205 HYPERVISOR: exec_cmd: vm set_ios R1 /home/pandhack/GNS3/images/IOS/c3745-adventerprisek9-mz.124-25.image 
+Aug 25 10:13:27.208 HYPERVISOR: exec_cmd: vm rename R1 rout1 
+Aug 25 10:13:27.254 HYPERVISOR: exec_cmd: vm set_ios rout1 /home/pandhack/GNS3/images/IOS/c3745-adventerprisek9-mz.124-25.image 
+Aug 25 10:13:39.107 HYPERVISOR: exec_cmd: vm set_ios rout1 /home/pandhack/GNS3/images/IOS/c3745-adventerprisek9-mz.124-25.image 
+Aug 25 10:15:08.300 HYPERVISOR: exec_cmd: vm set_ghost_status rout1 2 
+Aug 25 10:15:08.302 HYPERVISOR: exec_cmd: vm set_ghost_file rout1 /home/pandhack/проекты/CbS1_Networking_basics_Part_1.ID_1521088-1/src/arp_proekt/project-files/dynamips/c3745-adventerprisek9-mz.124-25.image-256.ghost 
+Aug 25 10:15:08.302 HYPERVISOR: exec_cmd: vm get_status rout1 
+Aug 25 10:15:08.303 HYPERVISOR: exec_cmd: vm set_config rout1 configs/i1_startup-config.cfg 
+Aug 25 10:15:08.303 HYPERVISOR: exec_cmd: vm start rout1 
+Aug 25 10:19:33.936 HYPERVISOR: exec_cmd: vm extract_config rout1 
+Aug 25 10:19:33.941 HYPERVISOR: exec_cmd: vm extract_config rout1 
+Aug 25 10:21:01.406 HYPERVISOR: exec_cmd: nio bind_filter udp-79699a99-fffc-4489-be2b-71ae92637dff 2 capture 
+Aug 25 10:21:01.406 HYPERVISOR: exec_cmd: nio setup_filter udp-79699a99-fffc-4489-be2b-71ae92637dff 2 en10mb /home/pandhack/проекты/CbS1_Networking_basics_Part_1.ID_1521088-1/src/arp_proekt/project-files/captures/rout1_FastEthernet00_to_rout2_FastEthernet00.pcap 
